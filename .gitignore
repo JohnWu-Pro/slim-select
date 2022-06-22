@@ -1,6 +1,8 @@
-.DS_Store
-.idea
-node_modules
+/.DS_Store/
+/.idea/
+/dist/
+/docs/
+/node_modules/
 
 # local env files
 .env.local
