@@ -13,7 +13,6 @@ export interface Option {
   id?: string
   value?: string
   text: string
-  innerText: string;
   innerHTML?: string
   selected?: boolean
   display?: boolean
@@ -49,7 +48,6 @@ export class Data {
       id: (info.id ? info.id : String(Math.floor(Math.random() * 100000000))),
       value: (info.value ? info.value : ''),
       text: (info.text ? info.text : ''),
-      innerText: (info.text ? info.text : ''),
       innerHTML: (info.innerHTML ? info.innerHTML : ''),
       selected: (info.selected ? info.selected : false),
       display: (info.display !== undefined ? info.display : true),
@@ -116,8 +114,7 @@ export class Data {
     return {
       id: (option.dataset ? option.dataset.id : false) || String(Math.floor(Math.random() * 100000000)),
       value: option.value,
-      text: option.dataset.ssText ?? option.text,
-      innerText: option.innerText,
+      text: option.text,
       innerHTML: option.innerHTML,
       selected: option.selected,
       disabled: option.disabled,
@@ -198,7 +195,7 @@ export class Data {
   // From data get option | option[] of selected values
   // If single select return last selected value
   public getSelected(): Option | Option[] {
-    let value: Option = { text: '', innerText: '', placeholder: this.main.config.placeholderText } // Dont worry about setting this(make typescript happy). If single a value will be selected
+    let value: Option = { text: '', placeholder: this.main.config.placeholderText } // Dont worry about setting this(make typescript happy). If single a value will be selected
     const values: Option[] = []
     for (const d of this.data) {
       // Deal with optgroups
