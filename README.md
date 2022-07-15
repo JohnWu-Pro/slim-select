@@ -1,4 +1,4 @@
-# Slim Select 
+# Slim Select
 ## slimselectjs.com
 Slim advanced select dropdown
 
@@ -37,6 +37,12 @@ For documentation and examples on all features see: http://slimselectjs.com
 - Opera 25+
 - Safari 9+
 
+## Build
+To build the distribution from the source,
+```bash
+npm run build
+```
+
 ## Installation
 ```bash
 npm install slim-select
@@ -46,7 +52,7 @@ npm install slim-select
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/<version>/slimselect.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/<version>/slimselect.min.css"> 
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/<version>/slimselect.min.css">
 ```
 
 ## Usage
